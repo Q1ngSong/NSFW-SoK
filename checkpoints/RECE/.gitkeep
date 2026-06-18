@@ -1,0 +1,9 @@
+RECE checkpoints
+
+These files are local symlinks and are ignored by git.
+
+| checkpoint_name | local_link | source_path | model_family | note |
+|---|---|---|---|---|
+| nudity_ep2 | nudity_ep2.pt | /root/Concept_Erasing/ErasingSet/checkpoints/RECE/nudity_ep2.pt | SD15 | RECE nudity erasure checkpoint, legacy default |
+| unsafe_ep1 | unsafe_ep1.pt | /root/Concept_Erasing/ErasingSet/checkpoints/RECE/unsafe_ep1.pt | SD15 | RECE unsafe-content checkpoint |
+| tipo | tipo.pt | /root/Concept_Erasing/ErasingSet/checkpoints/RECE/tipo.pt | SD15 | RECE TIPO checkpoint |

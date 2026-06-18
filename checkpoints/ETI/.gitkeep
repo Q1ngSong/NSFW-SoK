@@ -1,0 +1,9 @@
+ETI checkpoints
+
+These files are local symlinks and are ignored by git.
+
+| checkpoint_name | local_link | source_path | model_family | note |
+|---|---|---|---|---|
+| ETI | ETI.pt | /root/Concept_Erasing/ErasingSet/checkpoints/ETI/0.0000-0.pt | SD15 | available ETI checkpoint from the legacy ETI directory |
+| ETI1 | ETI1.pt | /root/Concept_Erasing/ErasingSet/checkpoints/ETI1/0.0000-0.pt | SD15 | available ETI1 checkpoint |
+| ETI2 | ETI2.pt | /root/Concept_Erasing/ErasingSet/checkpoints/ETI2/0.0156-0.pt | SD15 | available ETI2 checkpoint |

@@ -1,0 +1,7 @@
+SPM checkpoints
+
+These files are local symlinks and are ignored by git.
+
+| checkpoint_name | local_link | source_path | model_family | note |
+|---|---|---|---|---|
+| nudity_last | nudity_last.safetensors | /root/Concept_Erasing/ErasingSet/pipelines/SPM_rely/nudity_last.safetensors | SD15 | SPM nudity LoRA checkpoint from the legacy SPM_rely directory |

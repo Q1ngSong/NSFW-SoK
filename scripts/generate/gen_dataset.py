@@ -43,6 +43,64 @@ def main(methodname, checkpointname, datasetname, modelname, skip_existing=True)
         pipe = generate_images_with_sd
         checkpointname = checkpointname or CHECKPOINTNAME["AdvUnlearn"]
         pipe_kwargs["checkpoint_name"] = checkpointname
+    if methodname == "ESD":
+        from pipelines.ESD import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["ESD"]
+        pipe_kwargs["checkpoint_name"] = checkpointname
+    if methodname == "UCE":
+        from pipelines.UCE import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["UCE"]
+        pipe_kwargs["checkpoint_name"] = checkpointname
+    if methodname == "RECE":
+        from pipelines.RECE import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["RECE"]
+        pipe_kwargs["checkpoint_name"] = checkpointname
+    if methodname == "ETI":
+        from pipelines.ETI import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["ETI"]
+        pipe_kwargs["checkpoint_name"] = checkpointname
+    if methodname == "SPM":
+        from pipelines.SPM import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["SPM"]
+        pipe_kwargs["checkpoint_name"] = checkpointname
+
+    if methodname == "SEGA":
+        from pipelines.SEGA import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["SEGA"]
+    if methodname.startswith("CASG"):
+        from pipelines.CASG import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["CASG"]
+        if "-" in methodname:
+            pipe_kwargs["sld_strength"] = methodname.split("-", 1)[1].lower()
+    if methodname == "DAG":
+        from pipelines.DAG import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["DAG"]
+        pipe_kwargs["checkpoint_name"] = checkpointname
+    if methodname == "DRIFT":
+        from pipelines.DRIFT import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["DRIFT"]
+    if methodname == "GLoCE":
+        from pipelines.GLoCE import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["GLoCE"]
+        pipe_kwargs["gloce_ckpt_dir"] = NATIVE_SOK_ROOT / "checkpoints" / "GLoCE" / checkpointname
+    if methodname == "SG":
+        from pipelines.SG import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["SG"]
+    if methodname == "ConceptCorrector":
+        from pipelines.ConceptCorrector import generate_images_with_sd
+        pipe = generate_images_with_sd
+        checkpointname = checkpointname or CHECKPOINTNAME["ConceptCorrector"]
     if "pipe" not in locals():
         raise NotImplementedError(
             f"{methodname} 还没有迁移到 NSFW-SoK/pipelines 下。"

@@ -48,6 +48,45 @@ TASKS = [
 
     ("AdvUnlearn", "nude", "nudity", "SD15"),
     ("AdvUnlearn", "nude", "LAION-COCO-100", "SD15"),
+
+    ("ESD", "nude", "nudity", "SD14"),
+    ("ESD", "nude", "nudity", "SD15"),
+    ("ESD", "nude", "nudity", "SDXL"),
+    ("ESD", "nude", "LAION-COCO-100", "SD14"),
+    ("ESD", "nude", "LAION-COCO-100", "SD15"),
+    ("ESD", "nude", "LAION-COCO-100", "SDXL"),
+
+    ("UCE", "content_safety", "nudity", "SD15"),
+    ("UCE", "content_safety", "LAION-COCO-100", "SD15"),
+    ("UCE", "nude_sdv21", "nudity", "SD21"),
+    ("UCE", "nude_sdv21", "LAION-COCO-100", "SD21"),
+
+    ("RECE", "nudity_ep2", "nudity", "SD15"),
+    ("RECE", "nudity_ep2", "LAION-COCO-100", "SD15"),
+
+    ("ETI", "ETI", "nudity", "SD15"),
+    ("ETI", "ETI", "LAION-COCO-100", "SD15"),
+
+    ("SPM", "nudity_last", "nudity", "SD15"),
+    ("SPM", "nudity_last", "LAION-COCO-100", "SD15"),
+
+    ("SEGA", "Default", "nudity", "SD15"),
+    ("SEGA", "Default", "LAION-COCO-100", "SD15"),
+    ("CASG-Max", "Default", "nudity", "SD15"),
+    ("CASG-Max", "Default", "LAION-COCO-100", "SD15"),
+    ("DAG", "nude", "nudity", "SD15"),
+    ("DAG", "nude", "LAION-COCO-100", "SD15"),
+    ("DRIFT", "Default", "nudity", "SD15"),
+    ("DRIFT", "Default", "LAION-COCO-100", "SD15"),
+
+    ("GLoCE", "nude", "nudity", "SD15"),
+    ("GLoCE", "nude", "LAION-COCO-100", "SD15"),
+    ("SG", "Default", "nudity", "SD21"),
+    ("SG", "Default", "LAION-COCO-100", "SD21"),
+    ("SG", "Default", "nudity", "FLUX"),
+    ("SG", "Default", "LAION-COCO-100", "FLUX"),
+    ("ConceptCorrector", "Default", "nudity", "SD15"),
+    ("ConceptCorrector", "Default", "LAION-COCO-100", "SD15"),
 ]
 
 

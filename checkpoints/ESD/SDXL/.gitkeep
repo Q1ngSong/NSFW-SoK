@@ -1,0 +1,7 @@
+ESD SDXL checkpoints
+
+These files are local symlinks and are ignored by git.
+
+| checkpoint_name | local_link | source_path | note |
+|---|---|---|---|
+| nude | nude.safetensors | /root/Concept_Erasing/erasing/esd-models/sdxl/esd-Nudity-from-Nudity-esdxstrict.safetensors | SDXL nudity erasure |

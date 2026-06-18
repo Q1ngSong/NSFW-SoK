@@ -8,18 +8,28 @@ results/generated/*
 results/logs/*
 !results/logs/.gitkeep
 
-# Large reference image datasets
+# Datasets
+# Benchmark CSV/JSON files are small enough to track.
+!datasets/
+!datasets/benchmarks/
+!datasets/benchmarks/.gitkeep
+!datasets/benchmarks/*.csv
+!datasets/benchmarks/*.json
+
+# Large reference image datasets stay local.
 datasets/reference/*
 !datasets/reference/.gitkeep
-datasets/benchmarks/*
-!datasets/benchmarks/.gitkeep
 
 # Method checkpoints and model weights
 checkpoints/*
 !checkpoints/README.md
+!checkpoints/**/README.md
 !checkpoints/*/
 checkpoints/*/*
 !checkpoints/*/.gitkeep
+!checkpoints/*/*/
+checkpoints/*/*/*
+!checkpoints/*/*/.gitkeep
 
 # Evaluator checkpoints: keep directory layout, ignore weights
 evaluators/checkpoints/*
@@ -42,4 +52,22 @@ evaluators/checkpoints/nudenet/*
 !paper/figures/*.pdf
 !paper/figures/*.png
 
-reference/
+references/
+.agents/
+
+# Migrated pipeline dependency artifacts / local weights
+pipelines/**/__pycache__/
+pipelines/**/*.pt
+pipelines/**/*.pth
+pipelines/**/*.ckpt
+pipelines/**/*.safetensors
+pipelines/**/*.bin
+pipelines/**/*.npy
+pipelines/**/*.npz
+pipelines/**/*.log
+pipelines/**/events.out.tfevents*
+pipelines/**/*.ipynb
+pipelines/SG_rely/tamingtransformers/assets/*
+pipelines/SG_rely/tamingtransformers/data/*
+datasets/benchmarks/FPGI.csv
+datasets/benchmarks/FPGI++.csv

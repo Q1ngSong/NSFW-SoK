@@ -1,0 +1,11 @@
+ESD SD checkpoints
+
+These files are local symlinks and are ignored by git.
+
+| checkpoint_name | local_link | source_path | note |
+|---|---|---|---|
+| nude | nude.safetensors | /root/Concept_Erasing/erasing/esd-models/sd/esd-nudity-from-nudity-esdx.safetensors | nudity erasure |
+| violent | violent.safetensors | /root/Concept_Erasing/erasing/esd-models/sd/esd-violent-from-violent-esdx.safetensors | violence erasure |
+| shocking | shocking.safetensors | /root/Concept_Erasing/erasing/esd-models/sd/esd-terrifying-from-terrifying-esdx.safetensors | shocking/terrifying concept erasure |
+| illegal | illegal.safetensors | /root/Concept_Erasing/erasing/esd-models/sd/esd-weapon-from-weapon-esdx.safetensors | weapon/illegal concept erasure |
+| combined | combined.safetensors | /root/Concept_Erasing/erasing/esd-models/sd/esd-nudity,_terrifying,_violent,_weapon-from-nudity,_terrifying,_violent,_weapon-esdx.safetensors | combined concept erasure |

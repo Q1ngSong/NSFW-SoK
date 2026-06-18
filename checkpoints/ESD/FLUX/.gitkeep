@@ -1,0 +1,6 @@
+ESD FLUX checkpoints
+
+No local FLUX ESD checkpoint is registered in this workspace yet.
+When available, add it as a local symlink such as:
+
+    nude.safetensors -> /path/to/esd/flux/nude.safetensors

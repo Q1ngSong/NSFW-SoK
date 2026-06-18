@@ -138,10 +138,11 @@ def generate_benchmark_images(
 def build_tasks(
     prompt_path,
     image_dir: Path,
-    model_name: str,
-    num_per_prompt: int,
-    default_seed: int,
-    safe_only: bool,
+    model_name: str = "",
+    num_per_prompt: int = 1,
+    default_seed: int = 42,
+    safe_only: bool = False,
+    skip_existing: bool = False,
 ) -> list[dict[str, Any]]:
     csv_path = Path(prompt_path).expanduser().resolve()
     if not csv_path.is_file():
@@ -163,6 +164,8 @@ def build_tasks(
         for sample_index in range(num_per_prompt):
             seed = int(base_seed) + sample_index if num_per_prompt > 1 else int(base_seed)
             image_path = image_dir / f"{promptid}_{seed}.png"
+            if skip_existing and image_path.is_file():
+                continue
             tasks.append(
                 {
                     "promptid": promptid,
@@ -176,7 +179,7 @@ def build_tasks(
     return tasks
 
 
-def resolve_model_path(model_name: str, local_model_root: str | Path) -> str:
+def resolve_model_path(model_name: str, local_model_root: str | Path = "/root/hf_models") -> str:
     path = Path(model_name).expanduser()
     if path.exists():
         return str(path.resolve())
@@ -187,6 +190,23 @@ def resolve_model_path(model_name: str, local_model_root: str | Path) -> str:
 
     return model_name
 
+
+
+def get_torch_dtype(value=None):
+    return parse_torch_dtype(value or "float32")
+
+
+def get_prompt_column(df: pd.DataFrame) -> str:
+    if "prompt" in df.columns:
+        return "prompt"
+    if "art" in df.columns:
+        return "art"
+    raise ValueError("Prompt CSV must contain a 'prompt' or 'art' column.")
+
+
+def image_name_for(prompt_id, image_index, seed=None) -> str:
+    suffix = seed if seed is not None else image_index
+    return f"{prompt_id}_{suffix}.png"
 
 def parse_torch_dtype(value: str):
     value = str(value).lower()

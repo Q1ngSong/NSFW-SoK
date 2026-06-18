@@ -1,0 +1,8 @@
+UCE checkpoints
+
+These files are local symlinks and are ignored by git.
+
+| checkpoint_name | local_link | source_path | model_family | note |
+|---|---|---|---|---|
+| content_safety | content_safety.safetensors | /root/Concept_Erasing/ErasingSet/checkpoints/UCE/content_safety_uce.safetensors | SD14/SD15 | UCE content-safety checkpoint used by the legacy UCE pipeline |
+| nude_sdv21 | nude_sdv21.safetensors | /root/Concept_Erasing/ErasingSet/checkpoints/UCE/nude_uce_sdv21.safetensors | SD21 | UCE nudity checkpoint for Stable Diffusion 2.1 |
