@@ -1,0 +1,6 @@
+# CoErase Checkpoints
+
+| checkpoint_name | local_link | source_path | model_family | replaced_module | note |
+|---|---|---|---|---|---|
+| nude | `nude.pth` | `/root/Concept_Erasing/ErasingSet/checkpoints/CoErase/nude.pth` | SD15 | unet | NSFW/nudity erasure checkpoint |
+| violent | `violent.pth` | `/root/Concept_Erasing/ErasingSet/checkpoints/CoErase/violent.pth` | SD15 | unet | violence erasure checkpoint, not used for nudity-only tasks |

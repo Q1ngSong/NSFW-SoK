@@ -1,0 +1,17 @@
+# keep reference dataset directory
+# datasets/benchmarks/
+
+Benchmark CSV files live here and are not committed.
+
+Examples:
+
+```text
+i2p.csv
+nudity.csv
+LAION-COCO-NSFW-1000.csv
+LAION-COCO-SFW-1000.csv
+nudity-ring-a-bell.csv
+```
+
+Use this folder for prompt/evaluation CSVs, not image-mask training data.
+

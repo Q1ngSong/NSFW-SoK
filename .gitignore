@@ -1,0 +1,45 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Runtime results and logs
+results/generated/*
+!results/generated/.gitkeep
+results/logs/*
+!results/logs/.gitkeep
+
+# Large reference image datasets
+datasets/reference/*
+!datasets/reference/.gitkeep
+datasets/benchmarks/*
+!datasets/benchmarks/.gitkeep
+
+# Method checkpoints and model weights
+checkpoints/*
+!checkpoints/README.md
+!checkpoints/*/
+checkpoints/*/*
+!checkpoints/*/.gitkeep
+
+# Evaluator checkpoints: keep directory layout, ignore weights
+evaluators/checkpoints/*
+!evaluators/checkpoints/.gitkeep
+!evaluators/checkpoints/q16/
+evaluators/checkpoints/q16/*
+!evaluators/checkpoints/q16/.gitkeep
+!evaluators/checkpoints/nudenet/
+evaluators/checkpoints/nudenet/*
+!evaluators/checkpoints/nudenet/.gitkeep
+
+# Paper artifacts are curated and can be committed
+!paper/
+!paper/README.md
+!paper/tables/
+!paper/tables/.gitkeep
+!paper/tables/*.csv
+!paper/figures/
+!paper/figures/.gitkeep
+!paper/figures/*.pdf
+!paper/figures/*.png
+
+reference/

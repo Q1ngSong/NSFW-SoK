@@ -1,0 +1,5 @@
+# AdvUnlearn Checkpoints
+
+| checkpoint_name | local_link | source_path | model_family | replaced_module | note |
+|---|---|---|---|---|---|
+| nude | `nude.pt` | `/root/Concept_Erasing/ErasingSet/checkpoints/AdvUnlearn/TextEncoder-text_encoder_full-epoch_999_nude.pt` | SD15 | text_encoder | NSFW/nudity erasure checkpoint, epoch 999 |
